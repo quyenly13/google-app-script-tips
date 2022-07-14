@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap" rel="stylesheet">
+    <?!= include('css') ?>
+  </head>
+  <body>
+    <h5>Hi <?= highlightList.name ?>,</h3>
+
+
+    <? var data = highlightList.data;
+        for (var i = 0; i < data.length; i++) { ?>
+            <div class="highlight-item--wrapper">
+                <p class="title"><?= data[i].title ?>
+                    <small class="author">by <?= data[i].author ?></small>
+                </p>
+                <hr>
+                <p class="highlight"><?= data[i].highlight ?></p>
+                <p>Tag: <?= data[i].tag ?></p>
+            </div>
+    <? } ?>
+    
+    <br>
+    keep reading
+    </p>
+
+  </body>
+</html>
