@@ -7,8 +7,8 @@ function onOpen() {
 }
 
 function sendEmail() {
-    var emailAddress = 'lykieuquyen96@gmail.com';
-    var name = 'Quyen Ly';
+    var emailAddress = 'youremail@gmail.com';
+    var name = 'Your name';
     var highlightList =  {};
     highlightList['name'] = name;
 
@@ -43,7 +43,7 @@ function sendEmail() {
 
     MailApp.sendEmail({
         to: emailAddress,
-        subject: "Book Highlights of the day",
+        subject: "My Book Highlights",
         htmlBody: message
     });
 
@@ -52,7 +52,7 @@ function sendEmail() {
 function createTrigger(){
     ScriptApp.newTrigger("sendEmail")
     .timeBased()
-    .atHour(20)
+    .atHour(7)
     .everyDays(1)
     .inTimezone("Asia/Ho_Chi_Minh")
     .create();

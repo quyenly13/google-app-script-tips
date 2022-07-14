@@ -8,24 +8,19 @@
     <?!= include('css') ?>
   </head>
   <body>
-    <h5>Hi <?= highlightList.name ?>,</h3>
-
-
-    <? var data = highlightList.data;
-        for (var i = 0; i < data.length; i++) { ?>
-            <div class="highlight-item--wrapper">
-                <p class="title"><?= data[i].title ?>
-                    <small class="author">by <?= data[i].author ?></small>
-                </p>
-                <hr>
-                <p class="highlight"><?= data[i].highlight ?></p>
-                <p>Tag: <?= data[i].tag ?></p>
-            </div>
-    <? } ?>
-    
-    <br>
-    keep reading
-    </p>
-
+      
+      <div class="highlight--container">
+        <h3>Hi <?= highlightList.name ?>,</h3>
+        <? var data = highlightList.data;
+            for (var i = 0; i < data.length; i++) { ?>
+                <div class="highlight-item--wrapper">
+                    <p class="title"><?= data[i].title ?>
+                        <small class="author">by <?= data[i].author ?></small>
+                    </p>
+                    <p class="highlight"><?= data[i].highlight ?></p>
+                    <p class="tag"><?= data[i].tag ?></p>
+                </div>
+        <? } ?>
+    </div>
   </body>
 </html>
